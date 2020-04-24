@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StudentOverViewController">
+    <children>
+        <Label layoutX="37.0" layoutY="14.0" text="Student Details">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TableView fx:id="studentTable" layoutX="11.0" layoutY="79.0" prefHeight="242.0" prefWidth="572.0">
+            <columns>
+                <TableColumn prefWidth="40.800048828125" text="No." />
+                <TableColumn fx:id="idColumn" prefWidth="63.99993896484375" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="76.79998779296875" text="Name" />
+                <TableColumn fx:id="ageColumn" prefWidth="51.199951171875" text="Age" />
+                <TableColumn fx:id="nickNameColumn" prefWidth="88.00006103515625" text="NickName" />
+                <TableColumn fx:id="birthdayColumn" prefWidth="127.99993896484375" text="Birthday" />
+                <TableColumn fx:id="classColumn" prefWidth="126.40008544921875" text="Class" />
+            </columns>
+        </TableView>
+        <Button layoutX="339.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleNew" text="New" />
+        <Button layoutX="401.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleEdit" text="Edit" />
+        <Button layoutX="459.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleDelete" text="Delete" />
+        <TextField fx:id="findField" layoutX="248.0" layoutY="14.0" prefHeight="26.0" prefWidth="208.0" />
+        <Label layoutX="517.0" layoutY="18.0" text="Find">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="byId" layoutX="167.0" layoutY="53.0" mnemonicParsing="false" text="By ID" />
+        <RadioButton fx:id="byName" layoutX="297.0" layoutY="53.0" mnemonicParsing="false" text="By Name" />
+        <RadioButton fx:id="byNickName" layoutX="438.0" layoutY="53.0" mnemonicParsing="false" text="By NickName" />
+    </children>
+</AnchorPane>
